@@ -1,0 +1,20 @@
+<?php
+/**
+ * @category    ClassyLlama
+ * @copyright   Copyright (c) 2017 Classy Llama
+ */
+?>
+
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        $('[data-gallery-role="gallery-placeholder"]').on('gallery:loaded', function () {
+            $('[data-gallery-role="gallery"]').on('fotorama:load', function (e, fotorama, extra) {
+                if (extra.frame.type == 'video' && extra.frame.isMain) {
+                    extra.frame.$stageFrame.click()
+                }
+            });
+        });
+    });
+</script>
