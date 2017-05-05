@@ -1,0 +1,66 @@
+/**
+ * ClassyLlama_Vimeo
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @copyright  Copyright (c) 2017 Classy Llama.
+ * @license    http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ */
+
+// These styles force specific sizes at each breakpoint so the video does not show black bars
+& when (@media-common = true) {
+    .product-video[data-type="vimeo"] {
+        height: 100%;
+        iframe {
+            width: 100%;
+            position: relative;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xxs) {
+    .product-video[data-type="vimeo"] {
+        width: 192px;
+        height: 245px;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xs) {
+    .product-video[data-type="vimeo"] {
+        width: 298px;
+        height: 360px;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .product-video[data-type="vimeo"] {
+        width: 389px;
+        height: 488px;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .product-video[data-type="vimeo"] {
+        width: 276px;
+        height: 332px;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .product-video[data-type="vimeo"] {
+        width: 355px;
+        height: 449px;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__ll) {
+    .product-video[data-type="vimeo"] {
+        width: 455px;
+        height: 564px;
+    }
+}

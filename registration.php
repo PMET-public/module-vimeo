@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<!--
+<?php
 /**
  * ClassyLlama_Vimeo
  *
@@ -13,11 +12,7 @@
  * @copyright  Copyright (c) 2017 Classy Llama.
  * @license    http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  */
--->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="MagentoEse_Vimeo" setup_version="0.1.0">
-        <sequence>
-            <module name="Magento_ProductVideo"/>
-        </sequence>
-    </module>
-</config>
+
+use \Magento\Framework\Component\ComponentRegistrar;
+
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'MagentoEse_Vimeo', __DIR__);

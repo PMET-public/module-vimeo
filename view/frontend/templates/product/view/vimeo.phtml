@@ -1,0 +1,32 @@
+<?php
+/**
+ * ClassyLlama_Vimeo
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @copyright  Copyright (c) 2017 Classy Llama.
+ * @license    http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ */
+?>
+
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        // When the gallery has been loaded, begin listening for the fotorama:load event. When that event is triggered
+        // check if the frame being loaded is of type 'video' and is the main frame. If it is, click the frame to auto
+        // play the video.
+        $('[data-gallery-role="gallery-placeholder"]').on('gallery:loaded', function () {
+            $('[data-gallery-role="gallery"]').on('fotorama:load', function (e, fotorama, extra) {
+                if (extra.frame.type == 'video' && extra.frame.isMain) {
+                    extra.frame.$stageFrame.click()
+                }
+            });
+        });
+    });
+</script>
