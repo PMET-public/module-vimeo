@@ -15,6 +15,6 @@ To use this module you can follow these steps.
 
 # Dependencies
 
-For this module to work, the following patchs must be applied:
+For this module to work, the changes from the following urls must be applied as patches to the Magento installation:
 - https://github.com/magento/magento2/pull/9414/files
 - https://github.com/magento/magento2/commit/1fbe1f004ed911291e8a1ee390dff409c7a35b4f
