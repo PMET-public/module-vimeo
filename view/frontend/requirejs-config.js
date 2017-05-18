@@ -15,7 +15,11 @@
 var config = {
     map: {
         '*': {
-            loadPlayer: 'MagentoEse_Vimeo/js/load-player'
+            loadPlayer: 'MagentoEse_Vimeo/js/load-player',
+            froogaloop: 'https://secure-a.vimeocdn.com/js/froogaloop2.min.js'
         }
+    },
+    shim: {
+        froogaloop: {}
     }
 };
