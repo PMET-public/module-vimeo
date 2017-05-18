@@ -16,7 +16,8 @@ define([
     'jquery',
     'MagentoEse_Vimeo/js/player.min', // Vimeo API
     'jquery/ui',
-    'Magento_ProductVideo/js/load-player'
+    'Magento_ProductVideo/js/load-player',
+    'froogaloop'
 ], function ($, Player) {
     // A flag to only advance the gallery after the video ends the first time
     var autoAdvanceGallery = true;
