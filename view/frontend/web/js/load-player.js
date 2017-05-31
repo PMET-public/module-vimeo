@@ -30,7 +30,7 @@ define([
 
             player.on('finish', function (e) {
                 if (autoAdvanceGallery) {
-                    autoAdvanceGallery = false;
+                    // autoAdvanceGallery = false;
                     $('[data-gallery-role="gallery"]').data('fotorama').show('>');
                 }
             });
