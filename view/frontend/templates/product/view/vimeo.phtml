@@ -23,7 +23,7 @@
         // play the video.
         $('[data-gallery-role="gallery-placeholder"]').on('gallery:loaded', function () {
             $('[data-gallery-role="gallery"]').on('fotorama:load', function (e, fotorama, extra) {
-                if (extra.frame.type == 'video' && extra.frame.isMain) {
+                if (extra.frame.type == 'video' && extra.frame.position === "0") {
                     extra.frame.$stageFrame.click()
                 }
             });
