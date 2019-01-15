@@ -16,8 +16,7 @@ define([
     'jquery',
     'MagentoEse_Vimeo/js/player.min', // Vimeo API
     'jquery/ui',
-    'Magento_ProductVideo/js/load-player',
-    'froogaloop'
+    'Magento_ProductVideo/js/load-player'
 ], function ($, Player) {
     // A flag to only advance the gallery after the video ends the first time
     var autoAdvanceGallery = true;
@@ -30,7 +29,7 @@ define([
 
             player.on('finish', function (e) {
                 if (autoAdvanceGallery) {
-                    autoAdvanceGallery = false;
+                    // autoAdvanceGallery = false;
                     $('[data-gallery-role="gallery"]').data('fotorama').show('>');
                 }
             });
